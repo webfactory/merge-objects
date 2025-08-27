@@ -1,0 +1,16 @@
+{
+    "name": "@webfactoryde/merge-objects",
+    "version": "1.0.0",
+    "description": "JS Utility that merges multiple objects into one, with an option for deep merging",
+    "main": "src/merge-objects.js",
+    "type": "module",
+    "devDependencies": {
+        "@babel/core": "^7.28.3",
+        "@babel/preset-env": "^7.28.3",
+        "babel-jest": "^30.1.1",
+        "jest": "^30.1.0"
+    },
+    "scripts": {
+        "test": "jest"
+    }
+}
