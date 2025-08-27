@@ -10,11 +10,11 @@ npm install @webfactoryde/merge-objects
 
 ## Usage
 
-Import the `merge-objects` function in your module(s) and pass any number of objects:
+Import the `mergeObjects` function in your module(s) and pass any number of objects:
 
 ```javascript
 // your module
-import debounce from '@webfactoryde/merge-objects';
+import mergeObjects from '@webfactoryde/merge-objects';
 
 // Shallow merge:
 const obj1 = { a: 1, b: 2 };
