@@ -1,6 +1,6 @@
 {
     "name": "@webfactoryde/merge-objects",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "JS Utility that merges multiple objects into one, with an option for deep merging",
     "main": "src/merge-objects.js",
     "type": "module",
