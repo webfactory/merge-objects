@@ -1,5 +1,5 @@
 export default {
-    testEnvironment: 'node',
+    testEnvironment: 'jsdom',
     transform: {
         '^.+\\.jsx?$': 'babel-jest', // Use Babel to transpile ES modules
     },
