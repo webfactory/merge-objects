@@ -37,10 +37,11 @@ describe('mergeObjects', () => {
     });
 
     test('should handle empty objects', () => {
-        const obj1 = {};
+        const obj1 = { a: 1 };
         const obj2 = {};
-        const result = mergeObjects(false, obj1, obj2);
-        expect(result).toEqual({});
+        const obj3 = { c: 3 };
+        const result = mergeObjects(false, obj1, obj2, obj3);
+        expect(result).toEqual({ a: 1, c: 3 });
     });
 
     test('should handle deep merge with empty objects', () => {
@@ -48,5 +49,17 @@ describe('mergeObjects', () => {
         const obj2 = { b: { y: 30 }, c: 4 };
         const result = mergeObjects(true, obj1, obj2);
         expect(result).toEqual({ a: 1, b: { y: 30 }, c: 4 });
+    });
+
+    test('should preserve DOM element references in deep merge', () => {
+        const div = document.createElement('div');
+        div.id = 'test';
+
+        const obj1 = {};
+        const obj2 = { element: div };
+        const result = mergeObjects(true, obj1, obj2);
+
+        expect(result.element).toBe(div);
+        expect(result.element.id).toBe('test');
     });
 });
